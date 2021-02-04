@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conosci MEP!{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('main') }}
+{% endblock %}
+
+{% block body %}
+    <h1>Conosci MEP</h1>
+
+    <p>
+        Ciao, questa piccola applicazione <strong>Symfony</strong> è stata pensata per farti
+        conoscere un po' meglio MEP e gli strumenti con cui lavoriamo.
+    </p>
+
+    <h2>Che cosa hai a disposizione</h2>
+    <p>
+        Ti vengono forniti alcuni dati fake, copiati da <a href="https://jsonplaceholder.typicode.com/"
+        target="_blank">jsonplaceholder.typicode.com</a>, puoi usarli a tuo piacimento:
+    </p>
+
+    <ul>
+        <li>
+            Questo template Twig riceve una variabile <code>users</code> contenente dati fake su
+            alcuni utenti:
+            {{ dump(users) }}
+        </li>
+        <li>
+            Altri dati fake su dei "post" possono essere ottenuti tramite una chiamata asincrona a
+            <a href="{{ path('posts') }}" target="_blank">questo indirizzo</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('main') }}
+{% endblock %}
