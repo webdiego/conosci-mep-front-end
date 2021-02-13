@@ -8,21 +8,20 @@ const createElement = function (el, n) {
   <h2 class="mep-user_name">${el.name}</h2>
   <div class="mep-user-company">
   <h4 class="mep-user-sub-title">Company </h4>
-  <img src="../src/img/Guardians-of-The-Galaxy.png>
   <p class="mep-user-company_name">${el.company.name}</p>
   <p class="mep-user-company_type">${el.company.bs}</p>
   </div>
 
   <h4 class="mep-user-sub-title"> Address </h4>
   <p class="mep-user_address">${el.address.city}, ${el.address.street}</p>
-  <p class="mep-user_email">${el.email}</p>
-
-
   
-`;
+  <h4 class="mep-user-sub-title"> Contact </h4>
+  <p class="mep-user_email">${el.email}</p>
+  <p class="mep-user_email">${el.website}</p>
+  <p class="mep-user_email">${el.phone}</p>`;
     users.appendChild(newDiv);
 };
-data.forEach(function (d) {
-    createElement(d, d.id);
-    console.log(d);
+data.forEach(function (el) {
+    createElement(el, el.id);
+    console.log(el);
 });
