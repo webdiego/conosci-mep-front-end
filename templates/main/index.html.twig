@@ -1,36 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Conosci MEP!{% endblock %}
+{% block title %}Conosci MEP! Diego Massarini{% endblock %}
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('main') }}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
+
 {% endblock %}
 
 {% block body %}
-    <h1>Conosci MEP</h1>
+ <div class="mep">
+     <!-- <h4 class="mep-title">mep around the world</h4> -->
 
-    <p>
-        Ciao, questa piccola applicazione <strong>Symfony</strong> è stata pensata per farti
-        conoscere un po' meglio MEP e gli strumenti con cui lavoriamo.
-    </p>
+     <!-- HEADER -->
+     <div class="mep-partner">
+         <div class="mep-partner-ball">
+             <div class="mep-partner-img"></div>
+         </div>
+         <h3 class="mep-partner-description">These are not not just our partners , these are our gang!</h3>
+     </div>
 
-    <h2>Che cosa hai a disposizione</h2>
-    <p>
-        Ti vengono forniti alcuni dati fake, copiati da <a href="https://jsonplaceholder.typicode.com/"
-        target="_blank">jsonplaceholder.typicode.com</a>, puoi usarli a tuo piacimento:
-    </p>
-
-    <ul>
-        <li>
-            Questo template Twig riceve una variabile <code>users</code> contenente dati fake su
-            alcuni utenti:
-            {{ dump(users) }}
-        </li>
-        <li>
-            Altri dati fake su dei "post" possono essere ottenuti tramite una chiamata asincrona a
-            <a href="{{ path('posts') }}" target="_blank">questo indirizzo</a>
-        </li>
-    </ul>
+   <!-- PARTNER USERS -->
+     <div class="mep-users">
+     </div>
+ </div>
 {% endblock %}
 
 {% block javascripts %}

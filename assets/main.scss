@@ -1,3 +1,97 @@
-body {
-    background-color: lightgray;
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-size: 62,5%;
+  background-color: rgb(250, 250, 250);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+//CONTAINER
+.mep{
+  height: 100%;
+  display: flex;
+  
+  justify-content: center;
+  flex-direction: column;
+
+  //HEADER PARTNER 
+  &-partner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin:  5rem 0 10rem;
+    @media only screen and (max-width:959px){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-ball{
+      
+      height: 33rem;
+      width: 33rem;
+      background-color: #FEDB1D;
+      border-radius: 50%;
+      margin: 2rem;
+      @media (min-width:500px) and (max-width:700px){
+        height: 24rem;
+      width: 24rem;
+      }
+      @media screen and (max-width: 499px) {
+        height: 18rem;
+      width: 18rem;
+      }
+    }
+    &-img{
+      height: 29rem;
+      background-image: url(../src/img/b.n.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform:translateY(98px);
+      @media (min-width:500px)and (max-width:700px){
+      height: 22rem;
+      }
+      @media screen and (max-width: 499px) {
+      
+        transform:none;
+      }  
+    }
+    &-description{
+      width: 15rem;
+     font-size: 2rem;
+     text-align: center;
+     margin: 2rem;
+    }
+  }
+   //USER CARDS 
+    &-users{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+   &-user{
+    width: 29rem;
+    margin: 1rem;
+    border: 5px solid #FEDB1D ;
+    border-radius: 9px;
+    padding: 3rem;  
+    &-sub-title{
+      color:#FEDB1D;
+      margin-top: 1rem;
+      letter-spacing: 2px
+    }
+    &-company{    
+      &_type{
+        text-transform: capitalize; 
+      }
+    }
+    }
+  
 }
