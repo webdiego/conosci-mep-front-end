@@ -35,8 +35,8 @@ const createElement = function (el: any, n: number) {
   
   <h4 class="mep-user-sub-title"> Contact </h4>
   <p class="mep-user_email">${el.email}</p>
-  <p class="mep-user_email">${el.website}</p>
-  <p class="mep-user_email">${el.phone}</p>`;
+  <p class="mep-user_website">${el.website}</p>
+  <p class="mep-user_phone">${el.phone}</p>`;
   users.appendChild(newDiv);
 };
 data.forEach(function (el) {
